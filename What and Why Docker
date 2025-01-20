@@ -1,0 +1,23 @@
+What is Docker?
+
+Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers.
+
+A container includes everything needed to run an application—code, runtime, system tools, libraries, and dependencies—ensuring consistency across environments.
+
+Key Concepts:
+Containers: These are like mini-virtual machines, but they share the same operating system, which makes them more efficient.
+Docker Engine: This is the software that runs on your computer or server and manages the containers.
+Portability: Since containers include everything the app needs, they can run on any machine with Docker installed, whether it’s your laptop or a server in the cloud.
+
+
+Why do we need docker?
+
+Ensures "build once, run anywhere" for consistent behavior across development, testing, and production.
+
+Provides an isolated environment to eliminate dependency issues and run applications seamlessly on any system.
+
+Accelerates CI/CD pipelines, simplifying the building, testing, and deployment process.
+
+Docker containers use fewer resources than traditional virtual machines, making them faster and easier to scale.
+
+ 
