@@ -14,19 +14,6 @@ Containerization: Docker
 Orchestration: Docker Compose
 
 
-Feedback App/ 
-├── frontend/
-│   ├── Dockerfile          # Dockerfile to build the frontend image
-│   ├── index.html          # Main HTML file for the feedback form
-├── backend/
-│   ├── Dockerfile          # Dockerfile to build the backend image
-│   ├── app.py              # Flask app to handle feedback submission
-│   ├── requirements.txt    # Python dependencies for the backend
-├── db/
-│   ├── init.sql            # SQL script to initialize the database
-├── docker-compose.yml      # Docker Compose configuration
-
-
 Access the frontend at:
 
 http://localhost:8080
