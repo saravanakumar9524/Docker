@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        async function submitFeedback() {
+            const feedback = document.getElementById('feedback').value;
+            if (!feedback) {
+                alert('Please enter your feedback before submitting.');
+                return;
+            }
+
+            const response = await fetch('http://localhost:5000/feedback', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ feedback }),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert(result.message || 'Thank you for your feedback!');
+            } else {
+                alert('Failed to submit feedback. Please try again later.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Submit Your Feedback</h1>
+    <p>We value your feedback. Please share your thoughts with us below:</p>
+    <textarea id="feedback" placeholder="Enter your feedback here..."></textarea>
+    <button onclick="submitFeedback()">Submit Feedback</button>
+</body>
+</html>
